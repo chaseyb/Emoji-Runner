@@ -1,0 +1,34 @@
+{
+  "name": "emoji-runner",
+  "version": "1.0.0",
+  "description": "A twist on the classic runner game.",
+  "main": "server.js",
+  "scripts": {
+    "test": "canary",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloriousLoaf/Emoji-Runner.git"
+  },
+  "keywords": [
+    "runner",
+    "emoji",
+    "mvc"
+  ],
+  "author": "David Metcalf, Kimya Fallah, Maurice Chouamou, Chase Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gloriousLoaf/Emoji-Runner/issues"
+  },
+  "homepage": "https://github.com/gloriousLoaf/Emoji-Runner#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.3"
+  }
+}
