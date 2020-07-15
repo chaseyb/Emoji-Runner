@@ -22,9 +22,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DECIMAL(10, 2),
       defaultValue: 500.0
     },
-    avatar: {
-      type: DataTypes.STRING
-    },
     wins: {
       type: DataTypes.INTEGER,
       defaultValue: 0
@@ -36,19 +33,9 @@ module.exports = function(sequelize, DataTypes) {
     level: {
       type: DataTypes.INTEGER,
       defaultValue: 1
-    },
-    isManager: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
-    clickPower: {
-      type: DataTypes.INTEGER,
-      defaultValue: 1
-    },
-    tokensPerClick: {
-      type: DataTypes.DECIMAL(10, 2),
-      defaultValue: 0.01
     }
+ 
+    
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {
