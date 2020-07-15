@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://surveyjs.azureedge.net/1.0.59/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.0.59/survey.css" type="text/css" rel="stylesheet" />
+
+    <title>profile.</title>
+</head>
+
+<body>
+    <div class="container">
+      <div class="sign">
+            <h1> <img
+                    src="https://lh3.googleusercontent.com/proxy/D0wSoZEkt5pbki4RqbQSez8hsSEpBTtnghnwy6ENCGncjekV-gmnis0fY98B4Uoc4z83ymteCLTW6Nemcnyv41cV"
+                    width="50" , height="60"></img><span class="fast-flicker"> Emoji  </span>-<span class="flicker"> Runner </span>
+            </h1>
+        </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark runner-nav">
+        <button class="navbar-toggler justify-content-center" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown runner-nav-item">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false"><b
+                            class="runner-email font-semi">{{user.email}}</b><span class="sr-only">(current)</span></a>
+                    <div class="dropdown-menu font-reg">
+                        <a class="dropdown-item" href="/profile">runner<b class="font-bold">profile</b><span
+                                class="sr-only">(current)</span></a>
+                        <a class="dropdown-item purchased" href="/purchased">runner<b class="font-bold">library</b><span
+                                class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout">LOGOUT<span class="sr-only">(current)</span></a>
+                    </div>
+                </li>
+                
+                
+                
+
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+
+    {{!-- Stuff in the "real" body --}}
+    <div class="container profile-content">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-6 col-md-4">
+                <div class="card card-profile" style="width: 22rem;">
+                   
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item shady">
+                            <p><b class="font-bold">EMAIL:</b> <span
+                                    class="runner-email font-semi">{{user.email}}</span>
+                            </p>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <p><b class="font-bold">JOINED AT:</b></p>
+                            <p><i>{{user.createdAt}}</i></p>
+                        </li>
+                        <li class="list-group-item">
+                            <p><b class="font-bold">LAST ACTIVE AT:</b></p>
+                            <p><i>{{user.updatedAt}}</i></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="card card-profile">
+                    {{!-- <div class="card-header">
+
+                    </div> --}}
+                    <div class="card-body">
+                        {{!-- <h5 class="card-title"></h5> --}}
+                        <p class="card-text font-light"><b class="font-bold">RANK:</b> {{user.wins}} / 10</p>
+                        <div class="container">
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-profile">
+                    {{!-- <div class="card-header">
+
+                    </div> --}}
+                    <div class="card-body">
+                        {{!-- <h5 class="card-title"></h5> --}}
+                        <p class="card-text font-light"><b class="font-bold">GAME LEVEL:</b> {{user.clickPower}}</p>
+                    </div>
+                </div>
+                <div class="card card-profile">
+
+                    <div class="card-body">
+                        {{!-- <h5 class="card-title"></h5> --}}
+
+                        <p class="card-text font-light"><b class="font-bold">TOTAL POINTS</b> {{user.wins}}
+                            {{!-- {{user.wins}} --}}
+                        </p>
+                    </div>
+                </div>
+                <div class="card card-profile">
+                    {{!-- <div class="card-header">
+
+                    </div> --}}
+                    <div class="card-body">
+                        {{!-- <h5 class="card-title"></h5> --}}
+
+                        <p class="card-text font-light"><b class="font-bold">???????</b> {{user.loss}}
+                            {{!-- {{user.losses}} --}}
+
+                        </p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {{!-- {{#each runner}}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>{{this.name}}</h2>
+                </div>
+
+                <div class="card-body">
+                    <img class="runner-link" src={{this.link}} alt="">
+                    <p>Health Points: {{this.health_points}}</p>
+                    <p>Attack Power: {{this.attack_power}}</p>
+                    <p>Cost: {{this.cost}}</p>
+                    <p>Dice Value {{this.dice_value}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    {{/each}} --}}
+
+    <script src="../js/purchased.js"></script>
+</body>
+
+</html>

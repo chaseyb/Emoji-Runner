@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>sign up.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="./styles/styles.css" rel="stylesheet">
+    <link href="./styles/signup-login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container text-center">
+
+        <div class="sign">
+            <h1> <img
+                    src="https://lh3.googleusercontent.com/proxy/D0wSoZEkt5pbki4RqbQSez8hsSEpBTtnghnwy6ENCGncjekV-gmnis0fY98B4Uoc4z83ymteCLTW6Nemcnyv41cV"
+                    width="50" , height="60"></img><span class="fast-flicker"> Emoji  </span>-<span class="flicker"> Runner </span>
+            </h1>
+        </div>
+    
+        <p> A twist on the classic runner game with characters </p>
+
+        <div class="card">
+            <div class="card-body">
+                <h2>SIGN UP</h2>
+                <form class="signup font-light">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"><b class="font-bold">*</b>EMAIL ADDRESS</label>
+                        <input type="email" class="form-control" id="email-input" placeholder="emoji@emoji-mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"><b class="font-bold">*</b>PASSWORD</label>
+                        <input type="password" class="form-control" id="password-input" placeholder="@123#">
+                    </div>
+                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">ERROR:</span> <span class="msg"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Sign Up</button>
+                </form>
+                <br />
+                <p class="font-light">Already have an account? Log in . <a class="here-link " href="/">HERE</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/signup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+.meme-nav-item::after {
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 1s;
+}
+
+.meme-nav-item:hover {
+    color: #e3e1df;
+}
+
+.meme-nav-item:hover::after {
+    color: #e3e1df;
+    width: 100%;
+}
+
+.fa-meteor {
+    color: #f0933c;
+    text-shadow: 3px -2px 7px #30afc5;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    font-size: 60px;
+}
+
+.name-title {
+    font-size: 75px;
+    color:rgb(172, 171, 171);
+    font-family: "ChakraPetch-Light";
+}
+
+.navbar-brand {
+    margin: 0;
+}
+
+.meme-nav {
+    margin-bottom: 50px;
+}
+
+.meme-email {
+    color: #30afc5;
+}
+
+.nav-item {
+    opacity: .95;
+    margin: 0px 5px 0px 5px;
+    font-family: "ChakraPetch-Light";
+}
+
+.dropdown-menu {
+    background-color: #f0933c;
+}
+
+.dropdown-item {
+    color: white;
+    transition: .2s;
+}
+
+.dropdown-divider {
+    margin: 10px 20px 10px 20px;
+}
+
+#meme-points {
+    color: #29ff82;
+}
+
+.token-points {
+    color: #29ff82;
+}
+
+.meme-tokens {
+    color: #f0933c;
+    font-size: 20px;
+}

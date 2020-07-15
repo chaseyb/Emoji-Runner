@@ -1,0 +1,187 @@
+.meme-link{
+    height: 200px;
+    width: 200px;
+}
+button{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body{
+    background-image: url("https://www.freegreatpicture.com/files/147/4706-background-color.jpg"); 
+    background-size: cover;
+}
+#imag{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:15px;
+   
+}
+
+ h1{
+     text-align: center;
+ }
+
+ .navmenu li{
+     float: right;
+     position: relative;
+ }
+
+
+.fa-meteor {
+    color: #f0933c;
+    text-shadow: 3px -2px 7px #30afc5;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    font-size: 60px;
+}
+
+.name-title {
+    font-size: 75px;
+    color:rgb(172, 171, 171);
+}
+
+
+
+p {
+    margin: 0;
+}
+
+img {
+    margin-bottom: 20px;
+    -webkit-box-shadow: -7px 7px 54px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -7px 7px 54px -6px rgba(0,0,0,0.75);
+    box-shadow: -7px 7px 54px -6px rgba(0,0,0,0.75);
+}
+
+.buy {
+    font-size: 20px;
+}
+
+.lead {
+    color: rgb(172, 171, 171);
+    font-size: 25px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.fa-dice {
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.meme-cost {
+    color: #29ff82;
+    text-shadow: 0px 0px 5px black;
+}
+
+.meme-card-tokens {
+    margin-top: 3px;
+    font-size: 25px;
+    color: #f0933c;
+    text-shadow: 0px 0px 5px black;
+}
+
+.fa-fist-raised,
+.fa-shield-alt,
+.fa-heart {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.meme-stats {
+    font-size: 20px;
+}
+
+.meme-deets {
+    text-shadow: 0px 0px 5px black;
+}
+
+.meme-lvl {
+    font-size: 15px;
+}
+
+.meme-title {
+    text-shadow: 0px 0px 7px black;
+}
+
+
+/* LVL FILTER */
+.filter-bar {
+    margin: 0px 20px 50px 0px;
+    color: rgb(172, 171, 171);
+}
+
+.filter-lvl {
+    margin: 10px 10px 10px 0px;
+}
+
+.filter-lvl-button {
+    margin: 10px;
+    color: #30afc5;
+}
+
+.filter-lvl-button-lib {
+    margin: 10px;
+    color: #f0933c;
+}
+
+.battle-dropdown {
+    background-color: #f0933c;
+}
+h2,h1,p {
+    color: whitesmoke;
+    font-family: "ChakraPetch-Bold"
+}
+P{
+  font-size: 25px;
+}
+h1{
+  font-size: 60px;
+  text-align: center;
+}
+@keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #152410;
+      text-shadow: 0 0 0.3rem #c4c711, 0 0 1.5rem black,
+        -0.2rem 0.1rem 1rem black, 0.2rem 0.1rem 1rem black,
+        0 -0.5rem 2rem black, 0 0.5rem 3rem black;
+    }
+    28%,
+    33% {
+      color: rgb(62, 182, 26);
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: black;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 5s forwards, blink 3s 1s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 5s forwards, blink 3s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: rgb(175, 10, 10);
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem rgb(89, 192, 29),
+        -0.2rem 0.1rem 1rem black, 0.2rem 0.1rem 1rem black,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  

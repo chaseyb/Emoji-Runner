@@ -1,0 +1,151 @@
+body{
+  background-image: url("https://www.freegreatpicture.com/files/147/4706-background-color.jpg"); 
+  background-size: cover;
+  
+  }
+  .list-group-item {
+    line-height: 2.5;
+  }
+  
+  h2,h1,p {
+      color: whitesmoke;
+      font-family: "ChakraPetch-Bold"
+  }
+  P{
+    font-size: 25px;
+  }
+  h1{
+    font-size: 60px;
+  }
+  
+  .brand-name {
+      color:rgb(172, 171, 171);
+      font-size: 60px;
+      margin-top: 12%;
+      padding: 20px;
+  }
+  
+  .fa-meteor {
+      color: #f0933c;
+      text-shadow: 3px -2px 7px #30afc5;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+  }
+  
+  .name-title {
+      font-size: 65px;
+      font-family: "ChakraPetch-Light";
+  }
+  
+  .font-bold {
+      font-family: "ChakraPetch-Bold";
+  }
+  
+  .font-light {
+      font-family: "ChakraPetch-Light";
+      text-decoration: none;
+  }
+  
+  .lead {
+      float: right;
+      font-size: 16px;
+      padding: 0px 20px 0px 20px;
+  }
+  
+  .sign-up-title {
+      text-shadow: 0px 1px 7px #353b3b;
+  }
+  
+  .here-link {
+      color: #cc250f;
+      transition: .3s;
+      font-family: "ChakraPetch-SemiBold";
+  }
+  
+  .here-link:hover {
+      color: #29ff82;
+      text-decoration: none;
+  }
+  
+  .card {
+    background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/caput-mortuum-brown-abstract-low-polygon-background-aloysius-patrimonio.jpg");
+    border-radius: 30px;
+    border: 2px solid #5f0505;
+    box-shadow: 15px 15px 15px #381803;
+    width: 50%;
+    color: whitesmoke;
+    display: block;
+    margin: 0 auto;
+    margin-top: 150px;
+  
+   
+   
+  }
+   .login button:hover{
+    background-color: lawngreen;
+  
+  }
+  .signup button:hover{
+    background-color: lawngreen;
+  
+  }
+  
+  @font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  /* Keyframe for text animation */
+  .sign {
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #b37b15;
+    text-shadow: 0 0 0.3rem #ffe6ff, 0 0 1.5rem black,
+      -0.2rem 0.1rem 1rem black, 0.2rem 0.1rem 1rem black,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #152410;
+      text-shadow: 0 0 0.3rem #c4c711, 0 0 1.5rem black,
+        -0.2rem 0.1rem 1rem black, 0.2rem 0.1rem 1rem black,
+        0 -0.5rem 2rem black, 0 0.5rem 3rem black;
+    }
+    28%,
+    33% {
+      color: rgb(62, 182, 26);
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: black;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 5s forwards, blink 3s 1s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 5s forwards, blink 3s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: rgb(175, 10, 10);
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem rgb(89, 192, 29),
+        -0.2rem 0.1rem 1rem black, 0.2rem 0.1rem 1rem black,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
