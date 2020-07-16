@@ -40,13 +40,13 @@ module.exports = function (app) {
   app.get("/home", function (req, res) {
     //we will parse out the id later for addition use
     //remember to store the id variable somewhere
-    var meme;
+    var play;
     var user;
-    db.Memes.findAll({
+    db.runner.findAll({
       order: [["cost", "ASC"]]
     }).then(function (data) {
 
-      meme = data;
+      play = data;
       db.User.findOne({
         where: {
           id: req.user.id
@@ -55,18 +55,18 @@ module.exports = function (app) {
         user = data;
 
         var pageContent = {
-          meme: meme,
+          play: play,
           user: user
         };
         res.render("home", { page: pageContent });
       });
     });
   });
-  //route to filter out the memes based on lvl
+  //route to filter out the runner based on lvl
   app.get("/home/:lvl", function (req, res) {
-    var meme;
+    var play;
     var user;
-    db.Memes.findAll({
+    db.runner.findAll({
       where: {
         lvl: req.params.lvl
       },
@@ -74,7 +74,7 @@ module.exports = function (app) {
 
     }).then(function (data) {
 
-      meme = data;
+      play = data;
       db.User.findOne({
         where: {
           id: req.user.id
@@ -83,7 +83,7 @@ module.exports = function (app) {
         user = data;
 
         var pageContent = {
-          meme: meme,
+          play: play,
           user: user
         };
         res.render("home", { page: pageContent });
@@ -94,18 +94,18 @@ module.exports = function (app) {
 
 
 
-  //this is for the purchased memes, again passing the id so we know which mean belongs to the user
+  //this is for the purchased runner, again passing the id so we know which mean belongs to the user
   app.get("/purchased", function (req, res) {
     //we will parse out the id later for addition use
     //remember to store the id variable somewhere
-    var purchasedMeme;
+    var purchasedplay;
     var user;
-    db.Boughten_Memes.findAll({
+    db.Boughten_runner.findAll({
       where: {
         UserId: req.user.id
       }
     }).then(function (data) {
-      purchasedMeme = data;
+      purchasedplay = data;
       db.User.findOne({
         where: {
           id: req.user.id
@@ -114,7 +114,7 @@ module.exports = function (app) {
         user = data;
 
         var pageContent = {
-          meme: purchasedMeme,
+          play: purchasedplay,
           user: user
         };
         res.render("purchased", { page: pageContent });
@@ -122,30 +122,8 @@ module.exports = function (app) {
     });
   });
 
-  //renders the clicker page associated with the currently signed in user
-  app.get("/more-points", function (req, res) {
-    var clicker;
-    var user;
-    db.ClickerUpgrades.findAll({
-      order: [["cost", "ASC"]]
-    }).then(function (data) {
-      clicker = data;
-      db.User.findOne({
-        where: {
-          id: req.user.id
-        }
-      }).then(function (data) {
-        user = data;
-
-        var pageContent = {
-          clickUpgrades: clicker,
-          user: user
-        };
-        res.render("clicker", { page: pageContent });
-      });
-    });
-  });
-
+ 
+  
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //renders the clicker page associated with the currently signed in user
   app.get("/profile", function (req, res) {
@@ -158,46 +136,13 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/manager-buttons", function (req, res) {
-    db.User.findOne({
-      where: {
-        id: req.user.id
-      }
-    }).then(function (data) {
-      res.render("upgrade-click-buttons", { user: data });
-    });
-  });
+
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   ///=====BATTLE STUFF=====///
 
-  ///build html route to load battle page with the users meme as a data block for handlebars
-  app.get("/battle/select/:lvl", function (req, res) {
-    var selection;
-    var heros;
+  ///build html route to load battle page with the users play as a data block for handlebars
 
-    db.Boughten_Memes.findAll({
-      where: {
-        lvl: req.params.lvl,
-        UserId: req.user.id
-      }
-    }).then(function (data) {
-      heros = data;
-    });
-
-    db.Memes.findAll({
-      where: {
-        lvl: req.params.lvl
-      }
-    }).then(function (data) {
-      var enemies = data;
-      selection = {
-        heros: heros,
-        enemies: enemies
-      };
-      res.render("battleSelect", { memes: selection });
-    });
-  });
 
   //this is perfect for us to use, we can redirect them to the error page if they visit a wrong area
   app.get("*", function (req, res) {

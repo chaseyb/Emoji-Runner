@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
-  //this will create our table of memes in mysql
-  var Memes = sequelize.define("Memes", {
+  //this will create our table of runner in mysql
+  var runner = sequelize.define("runner", {
     name: DataTypes.STRING,
-    link: DataTypes.STRING,
+  
     lvl: DataTypes.INTEGER,
     ac: DataTypes.INTEGER,
     attack_power: DataTypes.INTEGER,
@@ -11,5 +11,5 @@ module.exports = function(sequelize, DataTypes) {
     dice_value: DataTypes.INTEGER
   });
 
-  return Memes;
+  return runner;
 };
