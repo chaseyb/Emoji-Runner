@@ -11,7 +11,6 @@ A classic runner game using MySQl, Node, Express, Handlebars & Sequelizer.
 * [License](#-license)
 * [Contributors](#-contributors)
 * [Questions](#-questions)
-* [YouTube](#-youtube)
 <p>&nbsp;</p>
 
 ## Description
@@ -51,9 +50,5 @@ Kimya Fallah, Maurice Chouamou, Chase Johnson and David Metcalf
 
 <p>&nbsp;</p>
 
-## YouTube
-**Quick demo video coming soon:** (https://youtu.be/)
-
 ---
 
-##### This markdown was created with [Readme Generator](https://github.com/gloriousLoaf/Readme-Generator)
