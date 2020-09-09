@@ -1,0 +1,22 @@
+/* canvas borders */ 
+canvas {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.gameStats {
+    background-color: rgb(25, 0, 0);
+    border-radius: 8px;
+    width: 600px; /* says its being overridden but its def. not */ 
+    display: inline !important;
+    -ms-display: inline;
+}
+  
+#levelNum, #scoreboard, #livesNum {
+    font-family: Poppins-Medium;
+    color: yellow;
+    font-size: 1.2em;
+    padding: 4px;
+    text-align: center;
+}

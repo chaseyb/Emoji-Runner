@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{!-- p5, p5.collide2d --}}
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.collide2d@0.7.1/p5.collide2d.min.js"></script>
+    {{!-- stylesheet --}}
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="./styles/main.css" rel="stylesheet">
+    <link href="./styles/util.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/game.css">
+
+    <title>Emoji Runner | Game</title>
+</head>
+
+<body>
+    {{!-- Main Nav --}}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/home">
+                <img src="./images/Logo.png" style="width:120px;height:70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/store">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="card gameStats" id="level">
+                <span class="m-5" id="levelNum">Level 1 : Go!</span><span class="m-5" id="livesNum">Lives :
+                    3</span> <span class="m-5" id="scoreboard">Score</span>
+            </div>
+        </div>
+    </div>
+
+
+    {{!-- Game Over Modal --}}
+    <div class="modal fade text-center" id="game-over" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="m-3 text-center">
+                    <h5 class="modal-title">Game Over</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Would you like to play again?</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="no">No, take me
+                        home.</button>
+                    <button type="button" class="btn btn-success" id="yes">Yes, let's roll!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="./classes/player/character.js"></script>
+    <script type="text/javascript" src="./classes/enemies/enemy-ground.js"></script>
+    <script type="text/javascript" src="./classes/enemies/enemy-air.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+
+</body>
+
+</html>

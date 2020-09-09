@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{!-- stylesheets & jQuery --}}
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Emoji Runner | Profile</title>
+</head>
+
+<body>
+    {{!-- Main Nav --}}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/home">
+                <img src="./images/Logo.png" style="width:120px;height:70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/store">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {{!-- Profile Cards --}}
+        <div class="container profile-content">
+            <br>
+            <br>
+            <div class=" container row">
+                <div class=" col-lg-7">
+                    <div class="card">
+                        <div class=" card-body">
+                            <p></p><b style="color:orange; font-bold">EMAIL:</b>
+                            <p></p><i style="color: #666666;">{{user.email}}</i></p>
+                        </div>
+                        <hr>
+
+                        <div class="card-body">
+                            <p></p><b style="color:orange; font-bold">DATE JOINED:</b>
+                            <p></p><i style="color: #666666;">{{user.createdAt}}</i></p>
+                        </div>
+                        <hr>
+
+                        <div class="card-body">
+                            <p></p><b style="color:orange; font-bold">LAST ACTIVE:</b></p>
+                            <p></p><i style="color: #666666;">{{user.updatedAt}}</i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card card-profile">
+                        <div class="card-body">
+                            <p class="card-text font-light"><b style="color:orange; font-bold">SCORE:</b>
+                            <p></p><i style="color: #666666;">{{user.score}}</i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card card-profile">
+                        <div class="card-body">
+                            <p class="card-text font-light"><b style="color:orange; font-bold">HIGHEST LEVEL:</b>
+                            <p></p><i style="color: #666666;">{{user.lvl}}</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
