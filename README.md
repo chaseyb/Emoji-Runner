@@ -16,7 +16,7 @@ An infinite runner game with Emojis! The goal of this game is to score as many p
 * [Questions](#-questions)
 
 ## Description
-This group project is an update on the runner style game. The user controls and emoji running, jumping and dodging the fun cartoon environments. User profiles are logged in a database for tracking high scores.
+We wanted to do something fun and create a free take on the  runner style game. There are many runner style games on the internet but none that featured emojis! The controls are very simple. To jump press the spacebar. As the player scores more points more enemies appear on screen. Since this game is never ending the goal is to survive as long as possible. Once the player has ran out of three lives the high score is logged into our database. 
 
 ## Installation
 Clone this repo to your local machine, navigate to the Emoji-Runner folder and run ```npm install``` to get the dependencies. Either setup a local instance or deploy your own Heroku project. See below.
