@@ -20,9 +20,9 @@ This group project is an update on the runner style game. The user controls and 
 Clone this repo to your local machine, navigate to the Emoji-Runner folder and run npm install to get the dependencies. Either setup a local instance or deploy your own Heroku project. See below.
 
 ## Usage
-Running this app locally: Get MySQL database running (set to default 3306), and navigate to the Emoji-Runner directory in your command line. Run node server to connect. Navigate to localhost:3000 in your browser and start having fun!
+**Running this app locally:** Get MySQL database running (set to default 3306), and navigate to the **Emoji-Runner** directory in your command line. Run ```node server``` to connect. Navigate to **localhost:3000** in your browser and start having fun!
 
-Heroku Deployment: Checkout JawsDB to set up your own hosted instance. Also give the app a try at my deployment on Heroku.
+**Heroku Deployment:** Checkout [JawsDB](https://elements.heroku.com/addons/jawsdb) to set up your own hosted instance. Also give the app a try at my deployment on [Heroku](https://emoji-runner.herokuapp.com/).
 
 ## License
 Open Source, use and change however you see fit.
